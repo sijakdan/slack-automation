@@ -54,7 +54,7 @@ const handler = async ([{ event, client }]: MessageParams) => {
     client.chat.postMessage({
       channel: event.channel,
       text: todoList.join("\n"),
-      thread_ts: ts,
+      // thread_ts: ts,
       blocks: [
         {
           type: "section",
