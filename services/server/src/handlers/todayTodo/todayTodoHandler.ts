@@ -7,7 +7,7 @@ import {
   uniqStr,
   withOneDayCache,
 } from "../../utils";
-import { TODAY_TODOS_URL } from "./constants";
+import { NOT_COMPLETE_EMOJI, TODAY_TODOS_URL } from "./constants";
 
 const fetchCacheTodayTodosInfo = withOneDayCache(async () => {
   const response = await fetch(TODAY_TODOS_URL);
@@ -46,7 +46,7 @@ const handler = async ([{ event, client }]: MessageParams) => {
 
     const todoList = todos
       .split("\n")
-      .map((x) => x.replace("• ", ":ballot_box_with_check: "));
+      .map((x) => x.replace("• ", `:${NOT_COMPLETE_EMOJI}: `));
 
     client.chat.postMessage({
       channel: event.channel,
