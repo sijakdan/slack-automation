@@ -1,0 +1,13 @@
+{
+  "name": "server",
+  "packageManager": "yarn@4.6.0",
+  "dependencies": {
+    "@slack/bolt": "^4.4.0",
+    "dotenv": "^17.2.2",
+    "tsx": "^4.19.2"
+  },
+  "scripts": {
+    "dev": "tsx src/server.ts",
+    "start": "tsx src/server.ts"
+  }
+}
