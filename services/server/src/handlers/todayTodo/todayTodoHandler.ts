@@ -17,14 +17,16 @@ const fetchCacheTodayTodosInfo = withOneDayCache(async () => {
     title: string;
     command: string;
     url: string;
+    disable: boolean;
   }>;
 });
 
 const handler = async ([{ event, client }]: MessageParams) => {
   const todayTodos = await fetchCacheTodayTodosInfo();
+  const filteredTodayTodos = todayTodos.filter((x) => !x.disable);
   const ts = event.ts;
 
-  for (const todayTodo of todayTodos) {
+  for (const todayTodo of filteredTodayTodos) {
     const { title, url } = todayTodo;
     const channel = url.split("/")[4];
     const todoTs = url.split("/")[5].slice(1);

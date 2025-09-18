@@ -3,12 +3,14 @@
         "_id": "정석호",
         "title": "YYYY-MM-DD 오늘 할 일 <@U08DARPQ2EB>",
         "command": "(스크럼) 오늘 할 일",
-        "url": "https://divopshq.slack.com/archives/C08RB9CHM3P/p1758187181032899"
+        "url": "https://divopshq.slack.com/archives/C08RB9CHM3P/p1758187181032899",
+        "disable": false
     },
     {
         "_id": "주산들",
         "title": "YYYY-MM-DD 오늘 할 일 <@U08DARPQ2EB>",
         "command": "(스크럼) 오늘 할 일",
-        "url": "https://divopshq.slack.com/archives/C08RB9CHM3P/p1758187181032899"
+        "url": "https://divopshq.slack.com/archives/C08RB9CHM3P/p1758187181032899",
+        "disable": true
     }
 ]
