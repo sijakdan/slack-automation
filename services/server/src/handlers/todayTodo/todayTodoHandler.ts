@@ -46,6 +46,7 @@ const handler = async ([{ event, client }]: MessageParams) => {
 
     const todoList = todos
       .split("\n")
+      .filter((x) => x.startsWith("• "))
       .map((x) => x.replace("• ", `:${NOT_COMPLETE_EMOJI}: `));
 
     client.chat.postMessage({
